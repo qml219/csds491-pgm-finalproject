@@ -8,12 +8,12 @@ The last exercise on assigment 4 confirmed that Gaussian Mixture Models combined
 Below are 100 points that are sampled from one bivariate normal distribution and 50 points from another. The EM with Gaussian Mixture Model algorithm was able to recover the original clustering with high accuracy,indicated by the similarity between the bottom and top graph. 
 
 <figure>
-  <img src="asm4_1.png" alt="Alternative Text" style="width:80%"> 
+  <img src="images\asm4_1.png" alt="Alternative Text" style="width:80%"> 
 </figure>
   
 </figure>
 <figure>
-  <img src="asm4_2.png" alt="Alternative Text" style="width:80%">
+  <img src="images\asm4_2.png" alt="Alternative Text" style="width:80%">
 </figure>
 
 <!-- (It all seems too good to be true) --> The number of Gaussians were predetermined, as were the parameters (means and covariances). These parameters are then used to sample a mixed pool of data that is going to be run through EM. Since the data pool was synthesized, EM on GMM was able to fit the clusters around the data points perfectly. However, the success of this experiement does not help to showcase the usefulness of the Gaussian Mixture Model in a pratical setting, where the structure of data that needs clustering is most certainly unknown. For me, the moment I bring the concept of a Gaussian Mixture Model into the context of data classification, things become obscured as class information is introduced to the picture. In particular, what is the relation between the ground truth classes and the number of Gaussian components. How do these Gaussian clusters allow us to infer the true class of unseen data points? Why do we even begin with something like a Gaussian Mixture Model for a classfication task and would it be any good if we decided to do so? With this project, I aim to record my explorations into supervised extensions of the Gaussian Mixture Model algorithms for classification, namely QDA and MDA. I will also demonstrate the insights about the overfitting phenomenon that results from using a complex model like MDA to estimate classification boundaries that are far more simple in nature. 
@@ -108,7 +108,7 @@ Compared to QDA, MDA creates a complex decision boundary that can take on more i
 
 
 <figure>
-  <img src="multimodal.png" alt="Alternative Text" style="width:80%">
+  <img src="images\multimodal.png" alt="Alternative Text" style="width:80%">
   <figcaption style="text-align: center; font-weight: bold;">A bivariate, multimodal distribution</figcaption center>
 </figure>
 
@@ -118,7 +118,7 @@ We can immediately confirm that MDA does outperform LDA and QDA when the assumpt
 
 
 <figure>
-  <img src="lda_qda_mda_comparison.png" alt="Alternative Text" style="width:80%">
+  <img src="images\lda_qda_mda_comparison.png" alt="Alternative Text" style="width:80%">
   <figcaption style="text-align: center; font-weight: bold;">Comparison on Toy Problem Classfication Performance</figcaption center>
 </figure>
 
@@ -252,8 +252,8 @@ The EM update rule is as derived above:
 #### Result and Evaluation:
 
 <figure>
-  <img src="model_accuracy_vs_complexity_train.png" alt="Performance on Train Set" style="width:49%; display:inline-block;">
-  <img src="model_accuracy_vs_complexity_test.png" alt="Performance on Test Set" style="width:49%; display:inline-block;">
+  <img src="images\model_accuracy_vs_complexity_train.png" alt="Performance on Train Set" style="width:49%; display:inline-block;">
+  <img src="images\model_accuracy_vs_complexity_test.png" alt="Performance on Test Set" style="width:49%; display:inline-block;">
   <figcaption style="text-align: center; font-weight: bold;">Performance as a function of K on Train Set (left) and Test Set (right)</figcaption>
 </figure>
 
@@ -263,7 +263,7 @@ From the performance graph, we've also seen that MDA can outperform QDA once the
 
 With five-fold cross-validation and average accuracy metrics, the performance graph is as below:
 <figure>
-  <img src="cv_performance_graph.png" alt="Performance on Train Set" style="width:70%; display:inline-block;">
+  <img src="images\cv_performance_graph.png" alt="Performance on Train Set" style="width:70%; display:inline-block;">
   <figcaption style="text-align: center; font-weight: bold;">Performance as a function of K with CV on Test Set</figcaption>
 </figure>
 
