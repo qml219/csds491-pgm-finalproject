@@ -27,5 +27,4 @@ Dr. Michael Lewicki’s lecture slides
 
 John Ramey: A Brief Look at Mixture Discriminant Analysis | R-bloggers 
 
-## Slides
-[Google Slides Presentation](#)
+#### This repo includes a written report in markdown and PDF (Results and Evaluation Report), a source code implementation Jupyter Notebook, the presentation slides in PDF (which is a summarizing powerpoint version of the written report), together with the images used in rendering the markdown.
