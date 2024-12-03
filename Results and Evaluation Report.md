@@ -84,15 +84,15 @@ What is the difference between a supervised and an unsupervised learning approac
 In the training data, we have pairs \((x_{i}, c_{i})\) where each \(x_{i} \in \mathbb{R}^D\) is a feature vector, and \(c_{i} \in \mathcal{J}\) is the corresponding class label, for \(i = 1, \ldots, N\). For classification, our primary objective is to maximize the conditional probability density \(p(\mathbf{x}|\mathbf{c})\). This density, through Bayes' Rule, allows us to compute the posterior probability \(p(\mathbf{c}|\mathbf{x})\) that gives the likelihood of a data point \(\mathbf{x}\) belonging to a certain class \(\mathbf{c}\). It is this posterior probability that serves as the basis for classifying new instances, thereby assigning them to the class with the highest posterior probability given their observed features.
 Without the Gaussian Mixture Modeling, our world involves 2 random variables, $\bf x$ and $\bf c$ 
 
-![supervised_raw](supervised_no_gaussian.png)
+![supervised_raw](images\supervised_no_gaussian.png)
 
 Compared to our original unsupervised Gaussian Mixture Model:
 
-![uGMM](unsupervised.png)
+![uGMM](images\unsupervised.png)
 
 To incorporate Gaussian Mixture Modeling into this new world that has the class random variable, we have to decide how we want $\bf c$ to influence $\bf z$. For me, it was helpful to visualize this modeling decision of merging the two graphs above into one as the new graph below: 
 
-![sGMM](supervised_gaussian.png)
+![sGMM](images\supervised_gaussian.png)
 
 But how do we want to model the relationship between $\bf c$ and $\bf v$ - the class random variable and the Gaussian distribution latent random variable that we assume to generate x? There are two ways: 
 * A direct one-to-one mapping, deterministic relationship: the class label c determines the Gaussian distribution from which the data belonging that class is generated. In other words, this is the simple case in which we model the class after a single Gaussian distribution, essentially collapsing (reducing) $\bf c$ and $\bf v$ into one random variable. 
